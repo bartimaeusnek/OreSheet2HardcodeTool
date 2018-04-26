@@ -53,15 +53,5 @@ public class Process2Hardcode {
 		}
 		return this.hardcode;
 	}
-	public List<String> plugin() {
-		for (int i=0; i<OML.size();i++) {
-			hardcode.add(new String("gtnop.ore.mix."
-						 +OML.get(i).getOreName()
-						 +"="
-						 +OML.get(i).getPrimary()+" "+OML.get(i).getSecondary()
-						 ));
-		}
-		return this.hardcode;
-	}
 	
 }

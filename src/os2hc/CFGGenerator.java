@@ -7,7 +7,7 @@ public class CFGGenerator {
 	public CFGGenerator() {
 	}
 	
-	public static ArrayList<String> generateCFGPart1(Oremix O){
+	public static ArrayList<String> generateCFG(Oremix O){
 		ArrayList<String> ret = new ArrayList<String>();
 		ret.add("            "+O.getOreName()+" {");
 		if(O.EA)
@@ -68,18 +68,10 @@ public class CFGGenerator {
 		ret.add("                B:GalaxySpace_VegaB_false="+O.VB);
 		if(O.Venus)
 		ret.add("                B:GalaxySpace_Venus_false="+O.Venus);
-		ret.add("            }");
-		ret.add(" ");
-		return ret;
-	}
-	
-	public static ArrayList<String> generateCFGPart2(Oremix O){
-		ArrayList<String> ret = new ArrayList<String>();
-		ret.add("            "+O.getOreName()+" {");
 		if(O.TF)
-		ret.add("                    B:\"Twilight Forest_false\"="+O.TF);
+		ret.add("                B:\"Twilight Forest_false\"="+O.TF);
 		if(O.DD)
-		ret.add("                    B:Underdark_false="+O.DD);
+		ret.add("                B:Underdark_false="+O.DD);
 		ret.add("            }");
 		ret.add(" ");
 		return ret;
